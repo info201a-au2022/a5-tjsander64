@@ -11,6 +11,7 @@ library("shiny")
 library("tidyverse")
 library("rsconnect")
 library("shinythemes")
+library("plotly")
 
 get_data <- function(num_records=-1) {
   fname <- "../source/owid-CO2-data.csv"
@@ -18,7 +19,7 @@ get_data <- function(num_records=-1) {
   return(df)
 }
 
-co2_data <- read.csv("~owid-CO2-data.csv")
+co2_data <- read.csv("./source/owid_co2_data.csv")
 
 fdf2 <- co2_data %>% 
   select(country, year, co2_per_capita, co2)

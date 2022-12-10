@@ -13,7 +13,6 @@ library("plotly")
 library("rlang")
 library("ggplot2")
 
-read.csv("../source/owid-CO2-data.csv")
 
 get_data <- function(num_records=-1) {
   fname <- "../source/owid-CO2-data.csv"
@@ -22,7 +21,7 @@ get_data <- function(num_records=-1) {
 }
 
 
-co2_data <- read.csv("~/owid-CO2-data.csv")
+co2_data <- read.csv("./source/owid_co2_data.csv")
 
 
 ## WRANGLING
