@@ -7,11 +7,14 @@
 #    http://shiny.rstudio.com/
 #
 
-library(shiny)
-library(dplyr)
-library(plotly)
-library(rlang)
-library(ggplot2)
+library("shiny")
+library("tidyverse")
+library("plotly")
+library("rsconnect")
+library("shinythemes")
+library("rlang")
+library("ggplot2")
+library("dplyr")
 
 read.csv("../source/owid-CO2-data.csv")
 

@@ -7,8 +7,14 @@
 #    http://shiny.rstudio.com/
 #
 
-library(shiny)
-library(shinythemes)
+library("shiny")
+library("tidyverse")
+library("plotly")
+library("rsconnect")
+library("shinythemes")
+library("rlang")
+library("ggplot2")
+library("dplyr")
 
 get_data <- function(num_records=-1) {
   fname <- "../source/owid-CO2-data.csv"
