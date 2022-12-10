@@ -9,12 +9,8 @@
 
 library("shiny")
 library("tidyverse")
-library("plotly")
 library("rsconnect")
 library("shinythemes")
-library("rlang")
-library("ggplot2")
-library("dplyr")
 
 get_data <- function(num_records=-1) {
   fname <- "../source/owid-CO2-data.csv"
@@ -22,7 +18,7 @@ get_data <- function(num_records=-1) {
   return(df)
 }
 
-co2_data <- get_data()
+co2_data <- read.csv("~owid-CO2-data.csv")
 
 fdf2 <- co2_data %>% 
   select(country, year, co2_per_capita, co2)
@@ -38,7 +34,7 @@ page_1 <- tabPanel(title = "Introduction",
     # Sidebar with a slider input for number of bins
     sidebarLayout(
         sidebarPanel(
-          h2("In 2020:"),
+          h2("As of 2021:"),
             htmlOutput("avg_message"),
             htmlOutput("med_message"),
             htmlOutput("min_message"),

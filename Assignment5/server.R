@@ -10,11 +10,8 @@
 library("shiny")
 library("tidyverse")
 library("plotly")
-library("rsconnect")
-library("shinythemes")
 library("rlang")
 library("ggplot2")
-library("dplyr")
 
 read.csv("../source/owid-CO2-data.csv")
 
@@ -25,8 +22,7 @@ get_data <- function(num_records=-1) {
 }
 
 
-co2_data <- get_data()
-
+co2_data <- read.csv("~/owid-CO2-data.csv")
 
 
 ## WRANGLING
